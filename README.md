@@ -1,6 +1,6 @@
 # Guide on how to setup your PC for Online Training
 
-In the course of the training you will work on a remote training server. In order to connect your
+In the course of the training you will be working on a remote training server. In order to connect your
 workstation/PC with this server please read this guide carefully.
 
 NOTE for network administrators: No ports on your firewall are required to be opened. The attendees 
@@ -26,9 +26,13 @@ a tunnel for each protocol.
 The protocol for the tunnel is SSH (port 22).
 
 ### Windows
-Start Putty and do the setup as depicted in the follwing screenshots:
+Start Putty and do the setup as depicted in the follwing screenshots.
+Enter in the red circled field the IP of the remote training server.
 
 ![startup](img/putty-destination.png)
+
+Go to section Connection/SSH/Tunnels and enter the three tunnels:
+
 ![tunnels](img/putty-tunnels-list.png)
 
 Click "open".
@@ -36,16 +40,23 @@ A console window opens. Enter your username and password.
 
 ![login](img/putty-login.png)
 
-Now you have three tunnels ready. 
-Leave the console window open.
+Now you have three tunnels ready: One for RDP, one for VNC and a third for noVNC.
+Leave the console window open. 
 
 ### Linux
 Open a terminal as a regular non-root user and type these commands which specify:
 - the user name (e.g. training2),
 - the IP of the remote training server
 
-ssh -L 5901:localhost:5901 training2@45.154.144.35
-ssh -L 5801:localhost:5801 training2@45.154.144.35
+```sh
+$ ssh -L 5901:localhost:5901 training2@45.154.144.35
+```
+
+```sh
+$ ssh -L 5801:localhost:5801 training2@45.154.144.35
+```
+
+
 
 
 ## Starting the remote session
@@ -55,11 +66,19 @@ ssh -L 5801:localhost:5801 training2@45.154.144.35
 
 ### Windows
 #### Via RDP client
-- Start the remote desktop client.
+- Start the remote desktop client. 
+- Enter the computer address 127.0.0.2:3389 :
 
 ![addres](img/rdp-start-session.png)
+
+- Login with your username and password:
+
 ![login](img/rdp-login.png)
+
+- The session at the remote server opens.
 ![session running](img/rdp-session.png)
+
+You are now ready for work !
 
 #### Via VNC viewer
 - Start the VNC viewer.
