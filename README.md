@@ -3,8 +3,8 @@
 In the course of the training you will be working on a remote training server. In order to connect your
 workstation/PC with this server please read this guide carefully.
 
-NOTE for network administrators: No ports on your firewall are required to be opened. The attendees 
-will be establishing connections via SSH to the remote training server.
+NOTE for network administrators: No incoming ports on your firewall have to be opened. The attendees 
+will be establishing outgoing connections via SSH to the remote training server.
 
 ## Prerequisites
 Before the training commences the teacher will provide you with:
@@ -12,10 +12,11 @@ Before the training commences the teacher will provide you with:
 - the IP of the remote training server like 45.154.144.35.
 
 ### Windows
-Install the SSH client Putty from https://www.putty.org/
+Install the SSH client <mark>Putty</mark> from https://www.putty.org/
 
 ### Linux
-Install a VNC viewer like Tiger VNC.
+Install a VNC viewer like Tiger VNC or the remote desktop client Remmina.
+Both should come with mayor Linux distros.
 
 
 ## Set up a tunnel
