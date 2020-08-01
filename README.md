@@ -5,6 +5,9 @@ workstation/PC with this server please read this guide carefully.
 
 NOTE for network administrators: No incoming ports on your firewall have to be opened. The attendees 
 will be establishing outgoing connections via SSH (port 22) tunnels to the remote training server.
+<br>
+
+
 
 ## Prerequisites
 Before the training commences the teacher will provide you with:
@@ -19,6 +22,8 @@ It is a standalone executable (*.exe) file which you can save to your Desktop.
 ### Linux
 Install a VNC viewer like *Tiger VNC* or the remote desktop client *Remmina*.
 Both should come with mayor Linux distros.
+<br>
+
 
 
 ## Set up the tunnels
@@ -51,26 +56,28 @@ Leave the console window open. Once you close it, the connection with the remote
 will be cut !
 
 ### Linux
+#### The tunnel for *VNC*
 Open a terminal as a regular non-root user and type these commands which specify:
 - the user name (e.g. training2),
 - the IP of the remote training server
-
-The tunnel for *VNC*:
 
 ```sh
 $ ssh -L 5901:localhost:5901 training2@45.154.144.35
 ```
 Now you are asked to login. Enter your username and password (as given by the teacher).
 
-The tunnel for *noVNC*:
+#### The tunnel for *noVNC*
+Open a terminal as a regular non-root user and type these commands which specify:
+- the user name (e.g. training2),
+- the IP of the remote training server
+
 ```sh
 $ ssh -L 5801:localhost:5801 training2@45.154.144.35
 ```
 Now you are asked to login. Enter your username and password (as given by the teacher).
-
-Under *Linux* we don't need an *RDP* tunnel.
-
 <br>
+
+
 
 ## Starting the remote session
 
@@ -128,9 +135,21 @@ You are now ready for the training !
 ### Linux
 #### Via VNC viewer
 Same as with Windows. See above.
+<br>
 
 
 
+## Closing the remote session
+On the remote desktop, in the taskbar click *Menu*, logout:
 
+![session logout](img/session-logout.png)
 
+![session logout](img/session-logout-2.png)
 
+### Disconect from the remote server
+
+In the console window enter the command
+
+```sh
+$ exit
+```
