@@ -153,3 +153,6 @@ In the console window enter the command
 ```sh
 $ exit
 ```
+
+Now the tunnel does not exist any more. You are no longer connected with the remote training server.
+
