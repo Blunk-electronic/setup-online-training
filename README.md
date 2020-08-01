@@ -12,7 +12,7 @@ Before the training commences the teacher will provide you with:
 - the IP of the remote training server like 45.154.144.35.
 
 ### Windows
-Install the SSH client <span style="background-color: #FFFF00">Putty</span> from https://www.putty.org/
+Install the SSH client <code> <i>Putty</i></code> from https://www.putty.org/
 
 ### Linux
 Install a VNC viewer like Tiger VNC or the remote desktop client Remmina.
