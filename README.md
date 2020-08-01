@@ -148,7 +148,7 @@ On the remote desktop, in the taskbar click *Menu*, logout:
 
 ### Disconect from the remote server
 
-In the console window enter the command
+In the remaining console window(s) enter the command
 
 ```sh
 $ exit
