@@ -25,8 +25,8 @@ Both should come with mayor Linux distros.
 Working on a remote server in graphical mode is based on the *VNC*, *noVNC* or *RDP* protocol. They use
 the port numbers 5901, 5801 or 3389 respectively. Whatever protocol you will be using, it must be
 tunneled from your location to the location of the training server. In our case we will setup
-a tunnel for each protocol.
-The protocol for the tunnel is SSH (port 22). So each protocols mentioned above will be wrapped in SSH.
+a tunnel for each protocol. With *Linux* you don't need *RDP*.
+The protocol for the tunnel is SSH (port 22). So each protocol mentioned above will be wrapped in SSH.
 
 ### Windows
 Start *Putty* and do the setup as depicted in the follwing screenshots.
@@ -70,13 +70,24 @@ Now you are asked to login. Enter your username and password (as given by the te
 
 Under *Linux* we don't need an *RDP* tunnel.
 
-
+<br>
 
 ## Starting the remote session
 
 ### Operating system independed via webbrowser
 Start a webbrowser like Firefox or Chromium and enter this web address: http://localhost:5801/
 
+![startup](img/noVNC-startup.png)
+
+- Login with your username and password:
+
+![login](img/noVNC-login.png)
+
+- The session at the remote server opens:
+
+![session running](img/noVNC-session.png)
+
+You are now ready for the training !
 
 ### Windows
 #### Via RDP client
