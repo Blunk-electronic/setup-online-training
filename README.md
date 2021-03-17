@@ -42,6 +42,7 @@ In section *Session* enter in the red circled field the IP (given to you by the 
 Go to section *Connection/SSH/Tunnels* and setup the three tunnels:
 <!-- images of the procedure step by step -->
 Type in field "Source port": 127.0.0.2:3389
+<br>
 Type in field "Destination": localhost:3389
 
 ![tunnels](img/putty-tunnels-list.png)
